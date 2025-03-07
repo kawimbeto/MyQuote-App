@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  publication: 2024-10-15
+  comment: MyText
+  is_public: false
+  user: one
+  philosopher: one
+  category: one
+
+two:
+  body: MyText
+  publication: 2024-10-15
+  comment: MyText
+  is_public: false
+  user: two
+  philosopher: two
+  category: two
