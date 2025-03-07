@@ -1,0 +1,39 @@
+<h1>Admin Dashboard</h1>
+
+<div class="alert alert-info">
+  <strong>Welcome, <%= current_user.first_name %>!</strong>
+  This is your admin dashboard where you can manage users and view quotes.
+</div>
+
+<h2>Manage Users</h2>
+<p>
+  Here you can view, edit, or delete user accounts.
+</p>
+
+<ul>
+  <li>
+    <%= link_to 'View All Users', users_path, class: "btn btn-primary" %>
+  </li>
+  <li>
+    <%= link_to 'Create New User', new_user_path, class: "btn btn-success" %>
+  </li>
+</ul>
+
+<h2>Manage Quotes</h2>
+<p>
+  Here you can manage quotes contributed by users.
+</p>
+
+<ul>
+  <li>
+    <%= link_to 'View All Quotes', quotes_path, class: "btn btn-primary" %>
+  </li>
+  <li>
+    <%= link_to 'Add New Quote', new_quote_path, class: "btn btn-success" %>
+  </li>
+</ul>
+
+<h2>Other Admin Functions</h2>
+<p>
+  This section can be expanded with more admin functionalities as needed.
+</p>

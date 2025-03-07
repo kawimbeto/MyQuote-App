@@ -1,0 +1,33 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>First name:</strong>
+    <%= user.first_name %>
+  </p>
+
+  <p>
+    <strong>Last name:</strong>
+    <%= user.last_name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= user.email %>
+  </p>
+
+  <p>
+    <strong>Current Password:</strong>
+    <span class="text-danger">ENCRYPTED</span>
+    <!-- Password Digest (ENCRYPTED): Remove the equal sign from the line below or remove the line completely -->
+    <% user.password_digest %>
+  </p>
+
+  <p>
+    <strong>Is admin:</strong>
+    <%= user.isAdmin %>  <!-- Make sure 'isAdmin' is consistent with your model's attribute name -->
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= user.status %>
+  </p>
+</div>

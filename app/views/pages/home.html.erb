@@ -1,0 +1,45 @@
+<h1>Welcome to MyQuote</h1>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        Discover a world of inspiration and wisdom with <strong>MyQuote</strong>, your personal quote collection and sharing platform. Here, you can explore famous quotes, save your favorites, and even contribute your own pearls of wisdom.
+      </p>
+
+      <div class="jumbotron mt-4 p-4 bg-light">
+        <h2>Why MyQuote?</h2>
+        <p>
+          We believe that words have the power to transform lives. Whether you're looking for motivation, insight, or a moment of reflection, MyQuote offers a unique way to connect with the thoughts and ideas of some of history's greatest minds.
+        </p>
+        <p>
+          <%= link_to 'Get Started', new_user_path, class: "btn btn-primary btn-lg" %> and begin your journey to discovering and sharing the wisdom that moves you!
+        </p>
+      </div>
+
+      <h2>Popular Categories</h2>
+      <p>Explore quotes by topic:</p>
+      <ul>
+        <li><%= link_to 'Motivation', category_path(Category.find_by(name: 'Motivation')) %></li>
+        <li><%= link_to 'Wisdom', category_path(Category.find_by(name: 'Wisdom')) %></li>
+        <li><%= link_to 'Life', category_path(Category.find_by(name: 'Life')) %></li>
+        <li><%= link_to 'Philosophy', category_path(Category.find_by(name: 'Philosophy')) %></li>
+        <li><%= link_to 'Happiness', category_path(Category.find_by(name: 'Happiness')) %></li>
+      </ul>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Discover thousands of quotes by famous philosophers, authors, and thinkers.</li>
+        <li>Create a personalized account to save and manage your favorite quotes.</li>
+        <li>Contribute your own quotes and share your wisdom with the world.</li>
+        <li>Browse quotes by category, philosopher, or theme.</li>
+        <li>Enjoy a clean and user-friendly interface, designed to make finding inspiration easy.</li>
+      </ul>
+
+      <h2>Join Us Today</h2>
+      <p>
+        <%= link_to 'Sign up now', new_user_path %> to start creating your own collection of inspiring quotes and join a community of like-minded individuals.
+      </p>
+    </div>
+  </div>
+</div>

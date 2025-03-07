@@ -1,0 +1,13 @@
+<h1>Search Results</h1>
+
+<% if @quotes.any? %>
+  <ul>
+    <% @quotes.each do |quote| %>
+      <li>
+        <%= link_to quote.body, quote_path(quote) %>  <!-- Link to view the quote -->
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No quotes found.</p>
+<% end %>

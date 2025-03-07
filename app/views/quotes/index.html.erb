@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Quotes</h1>
+
+<!-- Search Form -->
+<%= form_with(url: quotes_path, method: :get, local: true) do |form| %>
+  <div class="input-group mb-3">
+    <%= form.text_field :query, placeholder: "Search quotes", class: "form-control" %>
+    <button class="btn btn-outline-secondary" type="submit">Search</button>
+  </div>
+<% end %>
+
+<div id="quotes">
+  <% if @quotes.any? %>
+    <% @quotes.each do |quote| %>
+      <%= render quote %>
+      <p>
+        <%= link_to "Show this quote", quote %>
+      </p>
+    <% end %>
+  <% else %>
+    <p>No quotes found.</p>
+  <% end %>
+</div>
+
+<%= link_to "New quote", new_quote_path %>
